@@ -1,0 +1,107 @@
+Hello SNA.
+
+  GPIO-Out Set RELAY Modules: 
+(Step-Id = 10)                        std_logic_vector(9 downto 0) use (9 downto 0)
+      0>1>d:1                          --set single decimal channel ;
+      0>1>b:0000110001       -- set binary multiple channels ;
+      0>1>s:0000000011        -- Set  binary (only 1 channels) ;
+      0>1>r:0000000011        -- Reset  binary (only 1 channels) ;
+      --option 'Togle Channel' not in use
+
+GPIO-Out Set SYSTEM: 
+(Step-Id = 11)                           std_logic_vector(9 downto 0) use (3 downto 0)
+      0>1>b:0000110001        -- set binary multiple channels ;
+
+GPIO-Out Set BASE: 
+(Step-Id = 14)                           std_logic_vector(7 downto 0)
+      0>1>A:00001100       -- set Ch-A binary multiple channels ;
+      0>1>A:00001100       -- set Ch-B binary multiple channels ;
+
+RESET Modules ( (GPIO->ON) >> (GPIO->OFF) )
+(Step-Id = 12)
+    0>1>rst:0000000011>250>1000        -- reset 0>1>channel:xx>Delay(Active)>Delay(Passive)
+
+DELAY (mS)
+(Step-Id = 13)
+    750                                     --Delay (750mS)
+
+POWER SUPPLY (BK9201) 
+   1- Set (Step-Id = 15)
+        57,0>0,2>ON           --set Volt>Current>ON/OFF
+
+   2- Get (Step-Id = 16)
+       Volt?
+       Current?
+       Power?
+
+DMM bk5492C
+(Step-Id = 20)                   <measure DMM-DC Volt>
+       V-DC>0                   --Auto Range
+       V-DC>0,1                --Manual Range (0,1 1 10 100 1000)V
+       -----------------------------------------------------------------------------------------------
+                                          <measure DMM-AC Volt>
+       V-AC>0                   --Auto Range
+       V-AC>0,1                --Manual Range (0,1 1 10 100 750)V
+       -----------------------------------------------------------------------------------------------
+                                                               <measure DMM-Resistors 2x Wires>
+       R-2W>0                 --Auto Range
+           R-2W>1M              --Manual Range (10, 100, 1K, 10K, 100K, 1M, 10M, 100M)
+       ----------------------------------------------------------------------------------------------- 
+                                                               <measure DMM-Resistors 4x Wires>
+       R-4W>0                 --Auto Range
+           R-4W>10K             --Manual Range (10, 100, 1K, 10K, 100K, 1M, 10M, 100M)  
+       -----------------------------------------------------------------------------------------------
+
+      >false:100:2       --in case of a FALSE, repeat test 2x times, gump to step100
+
+FLASH ADB
+(Step-Id = 70)
+       adb_flash.bat      --xxxx.bat -name of bat file, location at ..\FLASH
+
+SERIAL CMD (RS232)
+(Step-Id = 60) 
+       >>open;<firmware version>      --Open Serial COM and check firmware version
+
+      >false:100:2       --in case of a FALSE, repeat test 2x times, gump to step100
+
+
+BLUETOOTH (u-blox)
+(Step-Id = 40)                   <Connect To ADB Bloetooth Interfice>
+
+RFID (Arduino & Sparkfun uno)
+(Step-Id = 45)                   <Connect To ADB RFID Interfice>
+      >false:100:2       --in case of a FALSE, repeat test 2x times, gump to step100
+
+RFID (Arduino & Sparkfun uno)
+(Step-Id = 46)                   <Connect To ADB RFID Interfice>
+      >false:100:2       --in case of a FALSE, repeat test 2x times, gump to step100
+
+PicoScope (SET)
+(Step-Id = 51)             --Set PicoScope (Time Aut = 2000mS)
+	A>8000>1000           Channel <A, B> ; Sampels ;TimeBase
+
+PicoScope (GET)
+(Step-Id = 52)             --Read PicoScope DATA
+	A>false:100:2            Channel <A, B> ; Sampels ;TimeBase
+                                --in case of a FALSE, repeat test 2x times, gump to step100
+
+(Step-Id = 52)             --Read PicoScope Positive & Negative VALUES(Time Aut = 2000mS)
+	B>false:46:3               Channel <A, B> if FALSE, goto step <46>, retry <3> times 
+
+(Step-Id = 53)              --Read PicoScope "Positive / Negative Measurement" (Time Aut = 2000mS)
+	B>Positive               Channel <A, B> if FALSE, goto step <46>, retry <3> times 
+	B>Negative
+
+PicoScope (SetAWG)
+(Step-Id = 55)              --Set PicoScope AWG Generator
+        ON>Sine>10000>2.0>1.0
+          <Sine><Square><Triangle><DC>
+          <10000> set 10kHz
+          <2.0> set piak_to_piak
+          <1.0> set offset
+												 
+        OFF     Set Out Off
+	  
+	  
+	  
+	  

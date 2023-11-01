@@ -1,0 +1,7 @@
+si 1
+speed 4000
+erace
+loadfile C:\ADB_FLASH\MK10_New\PSU_Controller_ledlms_5_3_7.s19
+r
+g
+q

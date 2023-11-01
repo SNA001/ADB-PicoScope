@@ -1,0 +1,12 @@
+C:\PEMicro\PROGACMP\CPROGACMP D:\LABVIEW\SEQUENSER_SNA\Ver_12\FLASH\adb_flash.cfg INTERFACE=USBMULTILINK PORT=USB1
+
+echo %ERRORLEVEL%
+
+if errorlevel 1 goto bad
+goto good
+:bad
+ECHO BAD BAD BAD BAD BAD BAD BAD BAD
+:good
+ECHO done_SNA
+
+rem pause

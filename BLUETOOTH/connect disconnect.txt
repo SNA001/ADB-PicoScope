@@ -1,0 +1,18 @@
+// *** Connect *** //
+AT+UDCP=sps://CCF95792332Ep/
+
++UDCP:1
+OK
+
++UUBTACLC:0,0,CCF95792332Ep
+
++UUDPC:1,1,4,CCF95792332Ep,20
+
+// *** Disconnect *** //
+AT+UDCPC=1
+
+OK
+
++UUDPD:1
+
++UUBTACLD:0

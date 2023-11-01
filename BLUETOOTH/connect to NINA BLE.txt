@@ -1,0 +1,43 @@
+AT+UDCP=sps://CCF9578E578Fp/
+
++UDCP:1
+OK
+
++UUBTACLC:0,0,CCF9578E578Fp
+
++UUDPC:1,1,4,CCF9578E578Fp,20
+ATO1
+
+OK
+open
+LED LMS, version 5.3:1 Rel date:Jun 11 2021 15:57:07
+
+Chuck(1):> passwd admin
+
+
+Chuck(3):> getPID
+
+PID: N/A
+
+Chuck(3):> 
+OK
+AT+GMI
+
+"u-blox"
+OK
+AT+GMM
+
+"NINA-B1"
+OK
+ATI9
+
+"5.0.0-011","NINA-B11X-5.0.0-011-0-g1aaa693"
+OK
+AT+GMR
+
+"5.0.0-011"
+OK
+AT+UMLA=1
+
++UMLA:CCF95792B245
+OK
