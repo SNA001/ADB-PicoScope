@@ -35,7 +35,6 @@
 		<Item Name="LMS.ico" Type="Document" URL="../Ico/LMS.ico"/>
 		<Item Name="LMS.ico" Type="Document" URL="/F/ADB LMS/LMS.ico"/>
 		<Item Name="PanelOnTop.vi" Type="VI" URL="../VI/PanelOnTop.vi"/>
-		<Item Name="PicoScope2000aGetBlock.vi" Type="VI" URL="../Devices/PicoScope/PicoScope2000a.llb/PicoScope2000aGetBlock.vi"/>
 		<Item Name="sendkeys.bat" Type="Document" URL="../sendkeys.bat"/>
 		<Item Name="Sequencer Main.vi" Type="VI" URL="../Sequencer Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -194,7 +193,6 @@
 			</Item>
 			<Item Name="ADB-LMS_Esp32.vi" Type="VI" URL="../BLUETOOTH/ADB-LMS_Esp32.vi"/>
 			<Item Name="ADB-LMS_Esp32_Rst.vi" Type="VI" URL="../BLUETOOTH/ADB-LMS_Esp32_Rst.vi"/>
-			<Item Name="ADB-Serial_WrRd.vi" Type="VI" URL="../../Ver_10/VI/ADB-Serial_WrRd.vi"/>
 			<Item Name="ADB-SetPID.vi" Type="VI" URL="../VI/ADB-SetPID.vi"/>
 			<Item Name="Advapi32.dll" Type="Document" URL="Advapi32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -208,8 +206,8 @@
 			<Item Name="Check.vi" Type="VI" URL="../RFID FTDI/utils/Check.vi"/>
 			<Item Name="CRC.vi" Type="VI" URL="../RFID FTDI/utils/CRC.vi"/>
 			<Item Name="DecToHexArray.vi" Type="VI" URL="../FTDI SPI/ftdi_loc/DecToHexArray.vi"/>
-			<Item Name="Device info to text.vi" Type="VI" URL="../../../PROJEKT/ADB Project/ADB Manual/FTDI SPI/subvi/Device info to text.vi"/>
 			<Item Name="Device info to text.vi" Type="VI" URL="../../../PROJEKT/NIKO/Labview/Niko V6_A/FTDI SPI/subvi/Device info to text.vi"/>
+			<Item Name="Device info to text.vi" Type="VI" URL="../FTDI SPI/subvi/Device info to text.vi"/>
 			<Item Name="Devices INI Status.ctl" Type="VI" URL="../../../Examples - 32bit/SEQUENCER/SEQUENSER v10/Sequencer v10/Ctl/Devices INI Status.ctl"/>
 			<Item Name="Enable-Disable ReaderFilter.vi" Type="VI" URL="../RFID FTDI/utils/Enable-Disable ReaderFilter.vi"/>
 			<Item Name="Error Converter (ErrCode or Status).vi" Type="VI" URL="../../../Examples - 32bit/FTDI/libMPSSE-SPI-LabVIEW-SNA_All/subvi/Error Converter (ErrCode or Status).vi"/>
@@ -264,21 +262,51 @@
 			<Item Name="MCP23S17 SYS Port A Set.vi" Type="VI" URL="../FTDI SPI/ftdi_loc/MCP23S17 SYS Port A Set.vi"/>
 			<Item Name="Panel Resize.vi" Type="VI" URL="../VI/Panel Resize.vi"/>
 			<Item Name="Parse Response.vi" Type="VI" URL="../RFID FTDI/utils/Parse Response.vi"/>
-			<Item Name="PicoErrorHandler.vi" Type="VI" URL="../Devices/PicoScope/PicoScope.llb/PicoErrorHandler.vi"/>
-			<Item Name="PicoErrorString.vi" Type="VI" URL="../Devices/PicoScope/PicoScope.llb/PicoErrorString.vi"/>
-			<Item Name="PicoScope Read.vi" Type="VI" URL="../Devices/PicoScope/PicoScope Read.vi"/>
-			<Item Name="PicoScope2000aAWG.vi" Type="VI" URL="../PICOSCOPE/PicoScope2000a.llb/PicoScope2000aAWG.vi"/>
-			<Item Name="PicoScope2000aClose.vi" Type="VI" URL="../Devices/PicoScope/PicoScope2000a.llb/PicoScope2000aClose.vi"/>
-			<Item Name="PicoScope2000aGetTimebase2.vi" Type="VI" URL="../Devices/PicoScope/PicoScope2000a.llb/PicoScope2000aGetTimebase2.vi"/>
-			<Item Name="PicoScope2000aOpen.vi" Type="VI" URL="../Devices/PicoScope/PicoScope2000a.llb/PicoScope2000aOpen.vi"/>
-			<Item Name="PicoScope2000aSettings.vi" Type="VI" URL="../Devices/PicoScope/PicoScope2000a.llb/PicoScope2000aSettings.vi"/>
-			<Item Name="PicoScope2000aUnitInfo.vi" Type="VI" URL="../Devices/PicoScope/PicoScope2000a.llb/PicoScope2000aUnitInfo.vi"/>
+			<Item Name="PicoErrorHandler.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope.llb/PicoErrorHandler.vi"/>
+			<Item Name="PicoErrorHandler2.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope.llb/PicoErrorHandler2.vi"/>
+			<Item Name="PicoErrorString.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope.llb/PicoErrorString.vi"/>
+			<Item Name="PicoScope-3000 Read.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope-3000 Read.vi"/>
+			<Item Name="PicoScope3000aAWG.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope3000a.llb/PicoScope3000aAWG.vi"/>
+			<Item Name="PicoScope3000aClose.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope3000a.llb/PicoScope3000aClose.vi"/>
+			<Item Name="PicoScope3000aGetBlock.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope3000a.llb/PicoScope3000aGetBlock.vi"/>
+			<Item Name="PicoScope3000aGetTimebase2.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope3000a.llb/PicoScope3000aGetTimebase2.vi"/>
+			<Item Name="PicoScope3000aOpen.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope3000a.llb/PicoScope3000aOpen.vi"/>
+			<Item Name="PicoScope3000aPowerSource.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope3000a.llb/PicoScope3000aPowerSource.vi"/>
+			<Item Name="PicoScope3000aSettings.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope3000a.llb/PicoScope3000aSettings.vi"/>
+			<Item Name="PicoScope3000aUnitInfo.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope3000a.llb/PicoScope3000aUnitInfo.vi"/>
 			<Item Name="PicoScope_Ini.vi" Type="VI" URL="../Devices/PicoScope/PicoScope_Ini.vi"/>
-			<Item Name="PicoScopeAdcToVolts.vi" Type="VI" URL="../Devices/PicoScope/PicoScope.llb/PicoScopeAdcToVolts.vi"/>
+			<Item Name="PicoScopeAdcToVolts.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope.llb/PicoScopeAdcToVolts.vi"/>
 			<Item Name="PicoScopeVoltsToAdc.vi" Type="VI" URL="../Devices/PicoScope/PicoScope.llb/PicoScopeVoltsToAdc.vi"/>
-			<Item Name="PicoStatus.vi" Type="VI" URL="../Devices/PicoScope/PicoScope.llb/PicoStatus.vi"/>
+			<Item Name="PicoStatus.vi" Type="VI" URL="../PICOSCOPE - 3000/PicoScope.llb/PicoStatus.vi"/>
 			<Item Name="pollingOnce.vi" Type="VI" URL="../RFID M5/pollingOnce.vi"/>
+			<Item Name="ps2000.dll" Type="Document" URL="ps2000.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 			<Item Name="PS2000a.dll" Type="Document" URL="PS2000a.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="ps3000.dll" Type="Document" URL="ps3000.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="ps3000a.dll" Type="Document" URL="ps3000a.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="ps4000.dll" Type="Document" URL="ps4000.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="ps4000a.dll" Type="Document" URL="ps4000a.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="ps5000.dll" Type="Document" URL="ps5000.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="ps5000a.dll" Type="Document" URL="ps5000a.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="ps6000.dll" Type="Document" URL="ps6000.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="ps6000a.dll" Type="Document" URL="ps6000a.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Return_t.ctl" Type="VI" URL="../RFID FTDI/utils/Return_t.ctl"/>
@@ -324,7 +352,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{C86C08C1-01D9-45C1-927B-E57E8157D235}</Property>
-				<Property Name="Bld_version.build" Type="Int">223</Property>
+				<Property Name="Bld_version.build" Type="Int">224</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">ADB LMS.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/ADB BLE/ADB LMS.exe</Property>
@@ -334,7 +362,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/ADB BLE/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Item[@Label='LMS.ico' and @Type='Document']</Property>
-				<Property Name="Source[0].itemID" Type="Str">{1923E329-C3C9-4743-98A6-F67840937E39}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{6D6EA604-018F-46EE-B85B-5584DB5A17E3}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Sequencer Main.vi</Property>
